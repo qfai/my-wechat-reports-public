@@ -31,6 +31,9 @@
   tr.subrow td.en { color: #c9ad68; font-size: 12px; }
   tr.subrow td.zh { color: #c9c7cf; font-size: 12px; }
   .token { width: 27px; height: 27px; margin: 0 7px 2px 0; vertical-align: middle; object-fit: contain; }
+  .glyph { width: 18px; height: 18px; margin: 0 2px; vertical-align: -4px; object-fit: contain; }
+  .glyph.wide { width: 26px; }
+  .source-strip { max-width: 230px; margin: 5px 0 0; border: 1px solid #5c5546; border-radius: 4px; vertical-align: middle; }
   .term { display: inline; vertical-align: middle; }
   .clarify { display: block; margin-top: 5px; padding: 5px 7px; background: #29241d; border-left: 3px solid #c99b45; color: #e3d1a8; font-size: 12px; }
   .small { color: #9fa7b5; font-size: 11px; }
@@ -50,7 +53,7 @@
   <div class="meta">来源：所提供的官方《KEYWORD LIST》PDF（8 页，英文） · 整理日期：2026-09-11</div>
 
   <div class="intro">
-    <strong>阅读说明：</strong>本表逐项覆盖 PDF 中的通用关键词及其具名子类型。X、Y 为效果给出的数值；“第一/第二能力窗口”“Knight Pool”“AI/BP”等专名保留英文缩写，便于与组件核对。PDF 以专属图标而非文字标注的少数属性或骰面，本表按其规则功能译述，并在无法从文件中确定正式属性名时写作“对应图标”。实际图标与数值仍以卡牌、骑士板和骰面为准。
+    <strong>阅读说明：</strong>本表逐项覆盖 PDF 中的通用关键词及其具名子类型。X、Y 为效果给出的数值；“第一/第二能力窗口”“Knight Pool”“AI/BP”等专名保留英文缩写，便于与组件核对。原文用图标表达的槽位、资源、目标和骰面已尽量截取为小图直接放入对应规则中；实际图标与数值仍以卡牌、骑士板和骰面为准。
   </div>
   <div class="legend">
     <span class="tag stone">Principality of Stone 石之公国</span>
@@ -72,7 +75,7 @@
       <tr><td class="en">Acrobatics</td><td class="zh">若你与一个 Monster 相邻且将要遭受 Knockdown，可改为执行 Vault。</td></tr>
       <tr><td class="en">Activate X</td><td class="zh">按 Mob 轨道顺序，为接下来的 X 个 Mob 分别抽取 AI。</td></tr>
       <tr><td class="en">Afflict X<br><span class="tag kingdom">依王国定义</span></td><td class="zh">此关键词会随王国改变；其具体含义见当前交战 Monster 的对应 Trait 卡。</td></tr>
-      <tr><td class="en">Ammo Reserves X</td><td class="zh">每个符合卡面所示两类图标的空槽位，额外提供 X 次 Charges。槽位类型以装备卡上的原始图标为准。</td></tr>
+      <tr><td class="en">Ammo Reserves X</td><td class="zh">每个空的 <img class="glyph" src="assets/kf-keywords/symbol-hand-slot.png" alt="手部槽位"> 或 <img class="glyph" src="assets/kf-keywords/symbol-weapon-slot.png" alt="武器槽位"> 槽位，额外提供 X 次 Charges。</td></tr>
       <tr><td class="en">Area</td><td class="zh">对原攻击目标进行 Power Roll 时，还要对该关键词所指定空间内的所有 Monster 分别结算 Power Roll；需要时分别揭示或抽取它们的 BP 卡，并统一使用本次攻击的 Total Power。只有原始攻击目标会结算 Monster Response。每个 Area 后都会注明影响哪些空间。</td></tr>
       <tr><td class="en">Armor-piercing X<br><span class="tag stone">石之公国</span></td><td class="zh">第二能力窗口期间，从目标身上弃除至多 X 枚 Armor token。</td></tr>
       <tr><td class="en">Armor Re-roll X</td><td class="zh">进行 Armor Roll 时，可重投至多 X 颗 Armor 骰。</td></tr>
@@ -87,14 +90,14 @@
       <tr><th class="namehead">English / 名称</th><th>完整中文规则</th></tr>
       <tr><td class="en">Bane X</td><td class="zh">获得 X 枚 Bane token。</td></tr>
       <tr><td class="en">Bane Limit X/+X</td><td class="zh">你的 Bane Limit 变为 X，或增加 +X。Bane Limit X 彼此不叠加；所有 +X 加值可以累积。</td></tr>
-      <tr><td class="en"><img class="token" src="assets/kf-keywords/black-token.png" alt="Black token"><span class="term">Black X</span></td><td class="zh">第二能力窗口期间，向 Knight Pool 放入 X 枚 Black token。Power Roll 步骤中，攻击 Knight 每花费 1 枚 Black，可重投 1 颗 Power 骰；每颗用 Black 重投的骰子还可把其中 1 个指定普通符号转成 1 个突破成功，视同使用 Break token。</td></tr>
+      <tr><td class="en"><img class="token" src="assets/kf-keywords/black-token.png" alt="Black token"><span class="term">Black X</span></td><td class="zh">第二能力窗口期间，向 Knight Pool 放入 X 枚 Black token。Power Roll 步骤中，攻击 Knight 每花费 1 枚 Black，可重投 1 颗 Power 骰；每颗用 Black 重投的骰子还可把其中 1 个 <img class="glyph" src="assets/kf-keywords/symbol-cup.png" alt="杯形骰面"> 转成 1 个 <img class="glyph" src="assets/kf-keywords/symbol-sword.png" alt="剑形成功骰面">，视同使用 Break token。</td></tr>
       <tr><td class="en">Block</td><td class="zh">进行 Evasion Roll 时，将 1 次成功命中视为已闪避。</td></tr>
       <tr class="subrow"><td class="en">Advanced Block</td><td class="zh">Block 的进阶子类型：进行 Evasion Roll 时，将 2 次成功命中视为已闪避。</td></tr>
       <tr class="subrow"><td class="en">Superior Block</td><td class="zh">Block 的高级子类型：进行 Evasion Roll 时，将 3 次成功命中视为已闪避。</td></tr>
       <tr><td class="en">Bloodletter<br><span class="tag future">未来王国</span></td><td class="zh">在 Principality of Stone 与 Sunken Kingdom 中无效；将在未来王国内容中产生作用。</td></tr>
       <tr><td class="en">Boundless</td><td class="zh">地形关键词。你不能主动移动到该地块上。Knight 若被迫移动到该地块、越过该地块或越过 Board Edge，立即死亡。</td></tr>
       <tr><td class="en">Braced</td><td class="zh">你不能被非自愿移动，也不会遭受 Knockdown；Displace 仍可影响你。</td></tr>
-      <tr><td class="en"><img class="token" src="assets/kf-keywords/break-token.png" alt="Break token"><span class="term">Break X</span></td><td class="zh">第二能力窗口期间，向 Knight Pool 放入 X 枚 Break token。Power Roll 步骤中，每枚 Break 可让攻击 Knight 将 1 个指定普通力量符号转成 1 个突破成功。</td></tr>
+      <tr><td class="en"><img class="token" src="assets/kf-keywords/break-token.png" alt="Break token"><span class="term">Break X</span></td><td class="zh">第二能力窗口期间，向 Knight Pool 放入 X 枚 Break token。Power Roll 步骤中，每枚 Break 可让攻击 Knight 将 1 个 <img class="glyph" src="assets/kf-keywords/symbol-cup.png" alt="杯形骰面"> 转成 1 个 <img class="glyph" src="assets/kf-keywords/symbol-sword.png" alt="剑形成功骰面">。</td></tr>
       <tr><td class="en">Bypass</td><td class="zh">Knight 可穿过其他 Knight 占据的空间，Monster 可穿过其他 Monster 占据的空间；主动移动不能结束在另一模型占据的空间。</td></tr>
       <tr class="subrow"><td class="en">Advanced Bypass</td><td class="zh">可主动穿过其他任意 Miniature；仍不能把主动移动结束在另一模型占据的空间。</td></tr>
       <tr class="subrow"><td class="en">Superior Bypass</td><td class="zh">包含 Advanced Bypass；此外可主动进入 Obstacle 空间并结束于其中，同时忽略 Difficult Terrain 与 Chasm。Obstacle 不阻挡视线或距离，因此站在其上的模型仍可正常被攻击。</td></tr>
@@ -109,10 +112,10 @@
       <tr><td class="en">Chasm</td><td class="zh">地形关键词。Knight 不能主动穿过 Chasm。Knight 若在 Chasm 空间结束移动、因 Pushback、Drag 或 Pull 穿过 Chasm，或其脚下被放置 Chasm，立即死亡。Knockback 经过 Chasm 时不会死亡，除非恰好在该空间结束移动。</td></tr>
       <tr><td class="en">Choke X</td><td class="zh">若你没有 Choked Condition 卡，获得该卡并把黑色亚克力方块放在对应轨道的“0”，作为 Choke Limit；随后将上限提高 X−1。该属性不能低于此上限。若已有 Choked 卡，则把 Choke Limit 提高 X；之后若当前属性低于 Choke Limit，获得足够数值使其回到该限制以上。</td></tr>
       <tr><td class="en">Clockwork<br><span class="tag future">未来王国</span></td><td class="zh">在 Principality of Stone 与 Sunken Kingdom 中无效；将在未来王国内容中产生作用。</td></tr>
-      <tr><td class="en">Commit</td><td class="zh">要用此武器攻击，先获得 +1 对应代价属性（PDF 以专属图标表示）。</td></tr>
+      <tr><td class="en">Commit</td><td class="zh">要用此武器攻击，先获得 +1 <img class="glyph" src="assets/kf-keywords/symbol-blue-resource.png" alt="蓝色代价属性">。</td></tr>
       <tr><td class="en">Cooldown</td><td class="zh">从手牌随机取 1 张卡，放入 Cooldown 区。</td></tr>
       <tr><td class="en"><img class="token" src="assets/kf-keywords/closing-token.png" alt="Closing token"><span class="term">Closing X</span></td><td class="zh">第二能力窗口期间，向 Knight Pool 放入 X 枚 Closing token。Attack Roll 步骤中，每枚 Closing 允许重投 1 颗 Attack 骰，并使本次 Attack Roll 中每颗 Attack 骰的结果 +1。</td></tr>
-      <tr><td class="en">Crash</td><td class="zh">遭受 Crash 的 Knight 失去 1 点对应红色属性，并遭受 Knockdown。每当非 Mob Monster 移入或穿过 Knight 的空间，或任何效果迫使 Knight 移到 Obstacle 上、把 Obstacle 放到 Knight 脚下时，该 Knight 都遭受 Crash。</td></tr>
+      <tr><td class="en">Crash</td><td class="zh">遭受 Crash 的 Knight 失去 1 点 <img class="glyph" src="assets/kf-keywords/symbol-red-resource.png" alt="红色防护属性">，并遭受 Knockdown。每当非 Mob Monster 移入或穿过 Knight 的空间，或任何效果迫使 Knight 移到 Obstacle 上、把 Obstacle 放到 Knight 脚下时，该 Knight 都遭受 Crash。</td></tr>
       <tr><td class="en">Cumbersome</td><td class="zh">第二能力窗口期间，若你用此武器成功造成 Wound，将该武器 exhaust；这视为主动 exhaust。</td></tr>
     </table>
   </div>
@@ -131,7 +134,7 @@
       <tr><td class="en">Destructible</td><td class="zh">地形关键词。Miniature 被非自愿移动到该地块上，或 Boss Monster 移到该地块上时，摧毁该地块。Knockback 的 Knight 会忽略沿途的非 Obstacle 地形，因此只有 Knockback 恰好结束在此地块上时才会摧毁它。</td></tr>
       <tr><td class="en">Devote</td><td class="zh">获得 1 枚 Devotion token。</td></tr>
       <tr><td class="en">Devote to X</td><td class="zh">若还没有 Saint X 卡，先获得该卡；然后获得 1 枚 Devotion token。</td></tr>
-      <tr><td class="en">Difficult Terrain</td><td class="zh">地形关键词。Knight 的一次主动移动只要经过任意数量的 Difficult Terrain 空间，其总移动格数便减少 1。位于 Difficult Terrain 上的 Monster 对应属性 −1（见原卡图标）。</td></tr>
+      <tr><td class="en">Difficult Terrain</td><td class="zh">地形关键词。Knight 的一次主动移动只要经过任意数量的 Difficult Terrain 空间，其总移动格数便减少 1。位于 Difficult Terrain 上的 Monster 获得 −1 <img class="glyph" src="assets/kf-keywords/symbol-monster-stat.png" alt="Monster 对应属性">。</td></tr>
       <tr><td class="en">Discard</td><td class="zh">从手牌随机取 1 张卡，放入 Discard 区。</td></tr>
       <tr><td class="en">Displace</td><td class="zh">把目标移动到其当前位置相邻的一个合法空位。若 Knight 没有可合法 Displace 的空间，改为死亡；若 Monster 没有合法空间，则放到距离最近的空位。</td></tr>
       <tr><td class="en"><img class="token" src="assets/kf-keywords/diversion-token.png" alt="Diversion token"><span class="term">Diversion</span></td><td class="zh">第二能力窗口期间，向 Knight Pool 放入 1 枚 Diversion token。攻击 Knight 可使用池中 1 枚 Diversion，在该次攻击结束前忽略 Fail Responses。</td></tr>
@@ -154,9 +157,9 @@
       <tr><td class="en">Envenomed X</td><td class="zh">第二能力窗口期间，若你造成了 Wound，向 Knight Pool 放入 X 枚 Break token；然后 Total Power 每超过该受伤 BP 卡的防御值 1 点，再放入 1 枚 Break，最多额外 X 枚。</td></tr>
       <tr><td class="en">Escalate X</td><td class="zh">逐张升级 AI 牌堆中 X 张最低等级卡：每次移除 1 张并洗入 1 张高一级的卡。然后对 BP 牌堆执行相同步骤。不得查看被移除的卡。完整的受伤卡触发流程见附录“Escalation Chart”。</td></tr>
       <tr><td class="en">Falsity</td><td class="zh">Attack Roll 步骤中，可重投 Crit die 而无需获得通常的重投代价。若重投前 Crit die 已经是命中，立即 Zeal 1。</td></tr>
-      <tr><td class="en"><img class="token" src="assets/kf-keywords/fire-token.png" alt="Fire token"><span class="term">Fire X</span></td><td class="zh">第二能力窗口期间，向 Knight Pool 放入 X 枚 Fire token。Power Roll 步骤中，每枚 Fire 将 1 个指定源符号转成 1 个指定目标符号；可先用其他 token 完成前置符号转换，但只要能够使用，就必须尽量使用池中的 Fire。Clear the Knight Pool 时，除正常清除外还移除 1 枚未使用 Fire，其余未使用 Fire 留在池中。具体两种骰面以 token 与 Power 骰图示为准。</td></tr>
+      <tr><td class="en"><img class="token" src="assets/kf-keywords/fire-token.png" alt="Fire token"><span class="term">Fire X</span></td><td class="zh">第二能力窗口期间，向 Knight Pool 放入 X 枚 Fire token。Power Roll 步骤中，每枚 Fire 将 1 个 <img class="glyph" src="assets/kf-keywords/symbol-cup.png" alt="杯形骰面"> 转成 1 个 <img class="glyph" src="assets/kf-keywords/symbol-sword.png" alt="剑形成功骰面">。可先用其他 token 把其他骰面转成 <img class="glyph" src="assets/kf-keywords/symbol-cup.png" alt="杯形骰面">；只要能够使用，就必须尽量使用池中的 Fire。Clear the Knight Pool 时，除正常清除外还移除 1 枚未使用 Fire，其余未使用 Fire 留在池中。</td></tr>
       <tr><td class="en"><img class="token" src="assets/kf-keywords/fleisch-token.png" alt="Fleisch token"><span class="term">Fleisch X</span></td><td class="zh">第二能力窗口期间，向 Knight Pool 放入 X 枚 Fleisch token；其后续用途按产生该 token 的游戏内容结算。</td></tr>
-      <tr><td class="en">Fortify X</td><td class="zh">若对应红色防护属性尚未达到最大值，获得 +X；若已经达到最大值，则把红色方块放到该轨道的 X 位置，作为额外防护值。之后损失该属性时，先像第二条轨道一样倒数并损失额外值。</td></tr>
+      <tr><td class="en">Fortify X</td><td class="zh">若 <img class="glyph" src="assets/kf-keywords/symbol-red-resource.png" alt="红色防护属性"> 尚未达到最大值，获得 +X；若已经达到最大值，则把红色方块放到该属性轨道的 X 位置，作为额外 <img class="glyph" src="assets/kf-keywords/symbol-red-resource.png" alt="红色防护属性">。之后损失该属性时，先像第二条轨道一样倒数并损失额外值。</td></tr>
       <tr><td class="en">Gangup X</td><td class="zh">来源先朝目标移动至多 X 格；再让目标 Knight 使用剩余格数，忽略来源，沿最短路径朝另一个最近 Monster 移动，或移动到与其相邻为止，视为非自愿移动。若目标已经与另一个 Monster 相邻，改为遭受 Knockdown。最后来源一定移动到目标相邻。若目标将结束在来源占据的空间，把来源 Displace 到 Knight 路径中的前一格。</td></tr>
       <tr><td class="en">Greater Pass X</td><td class="zh">Clear the Knight Pool 步骤中，选择至多 X 枚 Knight token 留在池中，但不能选择 Sunder 或 Power token。</td></tr>
       <tr><td class="en">Growth<br><span class="tag future">未来王国</span></td><td class="zh">在 Principality of Stone 与 Sunken Kingdom 中无效；将在未来王国内容中产生作用。</td></tr>
@@ -173,7 +176,7 @@
       <tr class="subrow"><td class="en">Soulseeker</td><td class="zh">Heartseeker 的子类型：查看顶 3 张并选择攻击其中 1 张；其余卡洗回牌堆。</td></tr>
       <tr><td class="en">Herd X</td><td class="zh">来源先朝目标移动至多 X 格；再让目标 Knight 使用剩余格数，忽略来源，沿最短路径朝另一个最近 Monster 移动，或移动到与其相邻为止，视为非自愿移动。若目标已与另一个 Monster 相邻，改为遭受 Knockdown。最后来源一定移动到目标相邻。若目标将结束在来源占据的空间，把来源 Displace 到 Knight 刚经过的前一格。<span class="clarify">源框一处把“另一个 Monster”排成了“another Knight”；结合前句、示例和同类流程，本表按 Monster 解释。</span></td></tr>
       <tr><td class="en">Hide</td><td class="zh">若不在 Monster 正面，可在回合结束时发动并进入 Hidden。若持有 Priority Target token，把它交给除你外 Passion 最高的 Knight。Hidden 期间 +1 Evasion、+1 Precision。移到 Monster 正面、获得 Priority Target、完成自己攻击的第二能力窗口，或到下回合结束时，Hidden 终止。把 Generic token 放在提供 Hide 的游戏元素上作提醒。</td></tr>
-      <tr><td class="en">Hope X</td><td class="zh">第二能力窗口期间，向 Knight Pool 放入 X 枚 Hope token。Power Roll 步骤中，每枚 Hope 可把 1 个卡面所列的两种源符号之一转成 1 个目标成功符号；具体骰面以原 token 图示为准。</td></tr>
+      <tr><td class="en">Hope X</td><td class="zh">第二能力窗口期间，向 Knight Pool 放入 X 枚 Hope token。Power Roll 步骤中，每枚 Hope 可把 1 个 <img class="glyph" src="assets/kf-keywords/symbol-cup.png" alt="杯形骰面"> 或 <img class="glyph" src="assets/kf-keywords/symbol-dove.png" alt="飞鸟形骰面"> 转成 1 个 <img class="glyph" src="assets/kf-keywords/symbol-sword.png" alt="剑形成功骰面">。</td></tr>
       <tr><td class="en">Hug X</td><td class="zh">与 Monster 相邻时，可在任一能力窗口沿正交或对角方向移动至多 X 格。每个进入的空间必须为空且仍与某个 Monster 相邻；不能从两个被占空间夹成的角落穿过。若在第一能力窗口使用，移动后目标不得处于当前武器有效范围之外。</td></tr>
     </table>
   </div>
@@ -258,7 +261,7 @@
     <h2>S</h2>
     <table>
       <tr><th class="namehead">English / 名称</th><th>完整中文规则</th></tr>
-      <tr><td class="en">Sacrifice</td><td class="zh">第一能力窗口期间，可失去 1 点卡面所示资源，立即向 Knight Pool 放入 1 枚 Break token。</td></tr>
+      <tr><td class="en">Sacrifice</td><td class="zh">第一能力窗口期间，可失去 1 点 <img class="glyph" src="assets/kf-keywords/symbol-red-resource.png" alt="红色防护属性">，立即向 Knight Pool 放入 1 枚 <img class="glyph" src="assets/kf-keywords/break-token.png" alt="Break token">。</td></tr>
       <tr><td class="en">Scavenge X</td><td class="zh">向 Loot deck 加入 X 张 Loot 卡。若未指定类型，可从 Kingdom Gear、Upgrade、Consumable Gear Loot 中选择。若没有可加入的卡，忽略本次 Scavenge。</td></tr>
       <tr class="subrow"><td class="en">Kingdom Scavenge X</td><td class="zh">向 Loot deck 加入 X 张 Kingdom Gear Loot。</td></tr>
       <tr class="subrow"><td class="en">Upgrade Scavenge X</td><td class="zh">向 Loot deck 加入 X 张 Upgrade Loot。</td></tr>
@@ -267,16 +270,16 @@
       <tr><td class="en">Second Chance</td><td class="zh">抽到 Mortis 或 Judicium 后，可忽略其效果并弃置，再从同一牌堆抽取并结算 1 张；弃置的 Judicium 会立刻洗回 Judicium 牌堆。第二次抽取不能以任何方式忽略。即使 Knockdown 或被禁止使用主动能力也可发动。</td></tr>
       <tr class="subrow"><td class="en">Superior Chance</td><td class="zh">与 Second Chance 相同，但第二次抽取时暂时从牌堆排除“<em>You died horribly</em>”Massive Peril Judicium 卡；抽取完成后恢复。第二次抽取仍不能忽略，且弃置的 Judicium 仍立即洗回。</td></tr>
       <tr><td class="en">Sink<br><span class="tag sunken">沉没王国</span></td><td class="zh">Exploration 步骤中，每当发现 Sink 图标，或 Exploration 卡要求时，触发 Sink。</td></tr>
-      <tr><td class="en">Soak X</td><td class="zh">Clash 中完成 Armor Roll 后，可把 Monster Attack 造成的对应防护属性损失减少 X。若损失被降到 0，不结算该损失会触发的对应后续图标效果。</td></tr>
+      <tr><td class="en">Soak X</td><td class="zh">Clash 中完成 Armor Roll 后，可把 Monster Attack 造成的 <img class="glyph" src="assets/kf-keywords/symbol-red-resource.png" alt="红色防护属性"> 损失减少 X。若该损失被降到 0，不结算其后续的 <img class="glyph wide" src="assets/kf-keywords/symbol-soak-followup.png" alt="损失后续效果图标"> 效果。</td></tr>
       <tr><td class="en"><img class="token" src="assets/kf-keywords/spell-token.png" alt="Spell token"><span class="term">Spell X</span></td><td class="zh">第二能力窗口期间，向 Knight Pool 放入 X 枚 Spell token。攻击期间，每枚 Spell 同时视为 Opening 与 Break token。</td></tr>
-      <tr><td class="en">Splinter X</td><td class="zh">与本次攻击目标相邻的 Knight，其对应红色防护属性 −X。</td></tr>
-      <tr><td class="en">Spotlight</td><td class="zh">第一能力窗口期间，若你是 Priority Target 或 Divine Target，本次攻击获得卡面所示的 +1 攻击加值。</td></tr>
+      <tr><td class="en">Splinter X</td><td class="zh">与本次攻击目标相邻的 Knight，其 <img class="glyph" src="assets/kf-keywords/symbol-red-resource.png" alt="红色防护属性"> −X。</td></tr>
+      <tr><td class="en">Spotlight</td><td class="zh">第一能力窗口期间，若你是 <img class="glyph" src="assets/kf-keywords/symbol-priority-target.png" alt="Priority Target"> Priority Target 或 <img class="glyph" src="assets/kf-keywords/symbol-divine-target.png" alt="Divine Target"> Divine Target，本次攻击获得 +<img class="glyph" src="assets/kf-keywords/symbol-attack-bonus.png" alt="攻击加值">。</td></tr>
       <tr><td class="en">Stalwart</td><td class="zh">即将遭受 Knockback 时，可使用此能力将其忽略。</td></tr>
-      <tr><td class="en"><img class="token" src="assets/kf-keywords/sunder-token.png" alt="Sunder token"><span class="term">Sunder X</span></td><td class="zh">第二能力窗口期间，向 Knight Pool 放入 X 枚 Sunder token。Power Roll 步骤中，每枚 Sunder 可把 1 个指定普通力量符号转成 2 个突破成功。Greater Pass 不能保留此 token。</td></tr>
+      <tr><td class="en"><img class="token" src="assets/kf-keywords/sunder-token.png" alt="Sunder token"><span class="term">Sunder X</span></td><td class="zh">第二能力窗口期间，向 Knight Pool 放入 X 枚 Sunder token。Power Roll 步骤中，每枚 Sunder 可把 1 个 <img class="glyph" src="assets/kf-keywords/symbol-cup.png" alt="杯形骰面"> 转成 2 个 <img class="glyph" src="assets/kf-keywords/symbol-sword.png" alt="剑形成功骰面">。Greater Pass 不能保留此 token。</td></tr>
       <tr><td class="en">Suppress</td><td class="zh">可把子类型指定的弃牌堆洗回相应牌堆。</td></tr>
       <tr class="subrow"><td class="en">BP Suppress</td><td class="zh">把 BP 弃牌堆洗回 BP 牌堆。</td></tr>
       <tr class="subrow"><td class="en">AI Suppress</td><td class="zh">把 AI 弃牌堆洗回 AI 牌堆。</td></tr>
-      <tr><td class="en">Swarm X</td><td class="zh">每有一个除攻击来源外、与被攻击 Knight 相邻的 Monster，该 Knight 的对应红色防护属性便 −X。</td></tr>
+      <tr><td class="en">Swarm X</td><td class="zh">每有一个除攻击来源外、与被攻击 Knight 相邻的 Monster，该 Knight 的 <img class="glyph" src="assets/kf-keywords/symbol-red-resource.png" alt="红色防护属性"> 便 −X。</td></tr>
     </table>
   </div>
 
@@ -316,10 +319,10 @@
       <tr><td>BP 2</td><td>从 Escalation deck 洗入 1 张 BP 3。</td><td>寻找并移出 1 张 AI 2；若来自弃牌堆，先把其余弃牌洗回。再洗入 1 张 AI 3。</td></tr>
       <tr><td>BP 3</td><td>在 BP 牌堆与弃牌堆寻找最低等级 BP 并移出游戏；若来自弃牌堆，先把其余弃牌洗回。洗入 1 张 Escalation BP 3，再把预留的 BP 3 放到牌堆底。</td><td>寻找并移出最低等级 AI；若来自弃牌堆，先把其余弃牌洗回。再洗入 1 张 AI 3。</td></tr>
       <tr><td>BP 3（Critically Wounded）</td><td>寻找并移出最低等级 BP；若来自弃牌堆，先把其余弃牌洗回。改为从 Escalation deck 洗入 2 张 BP 3。</td><td>与普通 BP 3 相同：移出最低等级 AI，并洗入 1 张 AI 3。</td></tr>
-      <tr><td>BP 3，且 BP 牌堆与弃牌堆全是 BP 3</td><td>把 BP 弃牌堆洗回牌堆，再把预留的 BP 3 放到牌堆底。</td><td>寻找并移出最低等级 AI，再洗入 1 张 AI 3。若已无等级 3 AI，每次 Escalation 改为让 Monster 按原图表顺序获得 1 项奖励：每次命中额外造成 +1 对应红色属性损失，随后依次为三个图标属性各 +1。</td></tr>
+      <tr><td>BP 3，且 BP 牌堆与弃牌堆全是 BP 3</td><td>把 BP 弃牌堆洗回牌堆，再把预留的 BP 3 放到牌堆底。</td><td>寻找并移出最低等级 AI，再洗入 1 张 AI 3。若已无等级 3 AI，每次 Escalation 改为让 Monster 按原图表顺序获得 1 项奖励：每次命中额外造成 +1 <img class="glyph" src="assets/kf-keywords/symbol-red-resource.png" alt="红色防护属性"> 损失，然后依次让另外两个图标属性各 +1。<br><img class="source-strip" src="assets/kf-keywords/symbol-escalation-bonuses.png" alt="Escalation 原图标奖励顺序"></td></tr>
       <tr><td>BP 3（Critically Wounded），且 BP 牌堆与弃牌堆全是 BP 3</td><td>把 BP 弃牌堆洗回牌堆；此时 BP 牌堆会比原来少 1 张。</td><td>同上一行；等级 3 AI 用尽后，继续按图表给 Monster 累加奖励。</td></tr>
     </table>
-    <div class="legend">Escalation 图表最后三项奖励在源 PDF 中仅以组件图标显示，没有随附英文属性名；为避免误造正式术语，本表保留为“图标属性”，结算时请按 Monster Sheet 上相同图标核对。</div>
+    <div class="legend">Escalation 的三项奖励在源 PDF 中以 1 个红色损失图标和另外 2 个组件属性图标显示，没有随附英文属性名；本表直接附上原图标顺序，结算时请按 Monster Sheet 上相同图标核对。</div>
   </div>
 
   <div class="foot">Kingdoms Forlorn · Official KEYWORD LIST PDF 中文整理 · 共收录全部主关键词与具名子类型</div>

@@ -83,6 +83,8 @@
       <div class="card"><strong>敌人回合</strong><br>1. 回合开始；2. 指定一个或多个目标；3. 移动；4. 结算技能；5. 投掷骰子；6. 依次放置防御骰子、对目标造成伤害、结算触发型技能和暴君骰；7. 基尔洛克反应；8. 回合结束。</div>
       <div class="card"><strong>为一个敌人执行一个回合</strong><br>这种额外回合不会占用该敌人本身的正常回合。执行时将敌人视为同伴，由基尔洛克依照其筹码信息移动至多2格、选择一个或多个目标、使用技能，并投掷攻击或防御骰子；以上行动均可选择不执行。</div>
       <div class="card"><strong>时点优先</strong><br>先处理“回合开始”效果，再移动、指定目标和投骰；“回合结束”效果最后处理。同一时点有多个效果时，按卡牌或技能的明确要求结算。</div>
+      <div class="card"><strong>黑暗 · Darkness · 《坚不可摧》战斗修正</strong><br>敌人面朝下进入战斗面板的远程位置，且不放置生命筹码。未揭示敌人在其回合向最近敌对单位移动2格；若与敌对单位相邻，立即翻面并补满生命。若被敌对单位指定为目标，则在该回合结束时翻面。</div>
+      <div class="card"><strong>灵动大地 · Shaky Ground · 《坚不可摧》战斗修正</strong><br>每当敌人对基尔洛克造成伤害并使其失去生命时，该基尔洛克所在的位置立即变为熔岩。</div>
     </div>
   </div>
 
@@ -173,12 +175,27 @@
   </div>
 
   <div class="section">
+    <h2>死亡投掷规则</h2>
+    <div class="note"><strong>胜利条件：</strong>对手先行动。率先移除对手全部生命的一方获胜。</div>
+    <table>
+      <tr><th>阶段</th><th>规则</th></tr>
+      <tr><td class="term">基尔洛克设置</td><td class="rule">每名基尔洛克拥有10生命，并从攻击骰子、防御骰子和中毒效果骰子中任选3颗；同一种骰子最多选择2颗。</td></tr>
+      <tr><td class="term">非基尔洛克设置</td><td class="rule">对手同样拥有10生命，固定使用2颗攻击骰子和1颗中毒效果骰子。</td></tr>
+      <tr><td class="term">1. 投掷骰子</td><td class="rule">投掷所有可用骰子；正在表示中毒效果的骰子，以及因虚弱而被移除的骰子不可使用。</td></tr>
+      <tr><td class="term">2. 应用防御</td><td class="rule">将掷出的防御结果应用于自己。</td></tr>
+      <tr><td class="term">3. 造成伤害</td><td class="rule">将掷出的伤害应用于对手。</td></tr>
+      <tr><td class="term">4. 应用状态</td><td class="rule"><strong>中毒 #：</strong>置于对手上并移除原有中毒；对手回合开始受到#真实伤害，之后数值降低1。<br><strong>虚弱 #：</strong>玩家选择对手#颗可用骰子，使其下回合不可投掷。<br><strong>眩晕：</strong>对手失去下一个回合。</td></tr>
+      <tr><td class="term">5. 备选方案</td><td class="rule">仅基尔洛克可使用，掷出的骨头不能保留。1个骨头：移除自己的中毒骰子或对手的1颗防御骰子；2个骨头：对手失去下一个回合；3个骨头：立即击倒对手并获胜。</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
     <h2>遭遇、奖励与恢复</h2>
     <table>
       <tr><th>术语</th><th>速查规则</th></tr>
       <tr><td class="term">持续<br><span class="en">Persistent</span></td><td class="rule">将卡牌放在暴君卡旁；效果持续到本次冒险结束，或直到规则指定的时点。</td></tr>
       <tr><td class="term">突袭<br><span class="en">Surprise</span></td><td class="rule">设置本场行动顺序后，将所有敌对单位移到行动顺序条底部，保持彼此相对顺序。</td></tr>
-      <tr><td class="term">受袭<br><span class="en">Surprised</span></td><td class="rule">设置行动顺序后，只将带有受袭状态的单位移到行动顺序条底部，保持彼此相对顺序。</td></tr>
+      <tr><td class="term">被突袭<br><span class="en">Surprised</span></td><td class="rule">设置行动顺序后，只将所有被突袭的单位移到行动顺序条底部，保持彼此相对顺序。</td></tr>
       <tr><td class="term">训练点数<br><span class="en">Training Point</span></td><td class="rule">成功完成带有训练图标的遭遇时，每名队员获得1点。可用于习得技能或尝试增加属性：训练生命、敏捷或技能总会成功；训练攻击或防御必须通过训练尝试，失败时该训练点数必须改用于其他方面。</td></tr>
       <tr><td class="term">普通战利品<br><span class="en">Loot</span></td><td class="rule">通常可在自己回合的任意时点使用；恢复阶段可在队员间自由交易。</td></tr>
       <tr><td class="term">宝库战利品<br><span class="en">Trove Loot</span></td><td class="rule">需要依次解开杠杆、机关与蛮力三类锁。已打开的锁会在之后的尝试中保持打开。</td></tr>

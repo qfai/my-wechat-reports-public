@@ -72,7 +72,7 @@
 <tr><td class="en">Inhabited</td><td class="zh">有人居住地块：根据你与当地势力的外交分数，套用地形卡上列出的加成与惩罚。若此地形地块被摧毁，与当地势力的外交值降低-1。</td></tr>
 <tr><td class="en">击退 X<span class="term-en">Knockback X</span></td><td class="zh">将受影响模型朝远离击退来源的方向直线移动X格。由攻击导致时只影响该物有效攻击范围内的目标；由该物响应导致时只影响与该物相邻的攻击者。被击退泰坦忽略沿途地形（障碍除外），遇到障碍或板图边界时按正式规则框处理。</td></tr>
 <tr><td class="en">击倒<span class="term-en">Knockdown</span></td><td class="zh">获得击倒状态卡牌，将倒地面朝上并把模型躺倒。持有倒地卡牌时不能执行行动、反应或自由行动，除非另有说明；在下一回合结束时翻到起身面，并在再下一回合开始时起身。</td></tr>
-<tr><td class="en">Labyrinth</td><td class="zh">迷宫地块：这些地块上的红线视为障碍与遮蔽视线。泰坦可自由穿过未被红线分隔的迷宫空间。原初者在移动和攻击时无视迷宫地块，但红线会阻挡其瞄准的视线。相连的迷宫地块视为单一地形地块。</td></tr>
+<tr><td class="en">迷宫板块<span class="term-en">Labyrinth</span></td><td class="zh">这些板块上的红线视为障碍与遮蔽视线。泰坦可自由穿过未被红线分隔的迷宫格。该物在移动和攻击时无视迷宫板块，但红线会阻挡其瞄准的视线。相连的迷宫板块视为单一地形板块。</td></tr>
 <tr><td class="en">救生索<span class="term-en">Lifeline</span></td><td class="zh">即将因跌落裂谷格死亡时，改为移位；即将跌出无根板图边界死亡时，停留在其相邻格。即使被击倒或无法使用主动能力，仍可使用救生索。</td></tr>
 <tr><td class="en">笨重<span class="term-en">Lumbering</span></td><td class="zh">不能非主动移动。</td></tr>
 <tr><td class="en"><img class="token" src="https://raw.githubusercontent.com/qfai/my-wechat-reports-public/main/reports/assets/ato-keywords/motivate.jpg" width="28" height="28" alt="鼓动图标">鼓动 X<span class="term-en">Motivate X</span></td><td class="zh">第二能力时段期间，选择另一个泰坦，该泰坦可以移动最多X格。若多个鼓动叠加，可将每个关键词施加到不同泰坦上。</td></tr>
@@ -112,14 +112,15 @@
 </table></div>
 <div class="section"><h2>Cycle I · 迷宫真相 (Truth of the Labyrinth)</h2><table><tr><th>关键词（中文 / English）</th><th>规则说明</th></tr>
 <tr><td class="en">Cretan City</td><td class="zh">克里特城市：Cycle I《迷宫真相》剧本中登场的城市地图/据点概念，代表探索区域中的城邦聚落，与剧情事件、势力交涉相关联。</td></tr>
-<tr><td class="en">Despair</td><td class="zh">绝望：一种负面token/状态，代表阿尔戈英雄承受的精神创伤，会与多种关键词(如慰藉Solace、亢奋Elation X)产生交互，积累过多可能触发不良后果。</td></tr>
-<tr><td class="en">Dread</td><td class="zh">惊惧：Cycle I引入的负面状态效果，代表泰坦/阿尔戈英雄面对迷宫中未知恐怖时产生的心理负担，通常会削弱行动或触发额外测试。</td></tr>
-<tr><td class="en">Fear</td><td class="zh">畏惧：迷宫真相剧情中的核心负面情绪机制之一，角色遭遇特定敌人或场景时可能积累畏惧，达到一定程度会引发负面剧情/战斗效果。</td></tr>
-<tr><td class="en">Labyrinth X</td><td class="zh">迷宫X：与迷宫地块相关的数值化关键词，X通常表示某种迷宫效应的强度或层数，用于处理探索阶段的地图机制。</td></tr>
-<tr><td class="en">Map symbols</td><td class="zh">地图符号：深渊守望者战斗盘/世界地图上使用的图标标记系统说明。</td></tr>
-<tr><td class="en">Mazetouched</td><td class="zh">迷宫感染(异化)：代表角色或生物被迷宫神秘力量侵染而产生变异/异化的状态，通常伴随规则或数值上的特殊调整。</td></tr>
-<tr><td class="en">Strangers</td><td class="zh">异乡人：迷宫真相剧情中登场的NPC阵营/角色类型，代表来自城邦之外、身份不明的人物，会影响外交或剧情分支。</td></tr>
-<tr><td class="en">Trample</td><td class="zh">践踏：一种攻击型移动关键词，通常代表大型单位可以碾过路径上的小型目标或地形并造成额外效果。</td></tr>
+<tr><td class="en"><img class="token" src="https://raw.githubusercontent.com/qfai/my-wechat-reports-public/main/reports/assets/ato-keywords/despair.jpg" width="28" height="28" alt="绝望标记">绝望<span class="term-en">Despair</span></td><td class="zh">每当阿尔戈英雄获得绝望时，在记录表上标记1个绝望。绝望会按数量逐级施加属性惩罚与行动限制；达到4个或更多绝望标记时，该阿尔戈英雄死亡。每次获得绝望后，按当前标记数量立即套用对应效果。</td></tr>
+<tr><td class="en">绝望上限</td><td class="zh">绝望上限默认为3点，用于衡量阿尔戈英雄能够承受的绝望程度。游戏效果可以提高或降低绝望上限；调整时移动记录表上的绝望上限标记，并按新的上限处理相关效果。</td></tr>
+<tr><td class="en">恐惧<span class="term-en">Dread</span></td><td class="zh">与畏惧共同构成故事集I的精神压力机制。相关效果会增加阿尔戈英雄承受的心理负担，并可能与绝望、症状或故事事件产生互动。</td></tr>
+<tr><td class="en">畏惧<span class="term-en">Fear</span></td><td class="zh">与恐惧共同构成故事集I的精神压力机制。遭遇迷宫中的威胁时可能获得，并按相关事件或规则结算其持续影响。</td></tr>
+<tr><td class="en">迷宫 X<span class="term-en">Labyrinth X</span></td><td class="zh">按照指示放置X块迷宫板块并遵循迷宫板块的连接、朝向及移动规则。具体板块组合与放置方式由遭遇或效果指定。</td></tr>
+<tr><td class="en">地图符号<span class="term-en">Map symbols</span></td><td class="zh">《迷宫真相》的地图使用多种特殊符号表示阿尔戈号移动限制、受限路线、控制区域和已探索地点等效果；遇到不熟悉的符号时，按地图符号图例结算。</td></tr>
+<tr><td class="en">迷阵失常<span class="term-en">Mazetouched</span></td><td class="zh">故事集I症状。角色受到迷宫影响后产生长期精神异常，将其记录在阿尔戈英雄记录表的症状区域，并持续套用卡牌或记录表所述效果。</td></tr>
+<tr><td class="en">陌路人<span class="term-en">Strangers</span></td><td class="zh">故事集I中出现的特殊人物与势力类别。其身份、立场和互动由相关事件决定，可能影响阿尔戈号的探索、资源及剧情选择。</td></tr>
+<tr><td class="en">践踏<span class="term-en">Trample</span></td><td class="zh">处理大型单位跨越、挤压或碾过目标时使用的特殊移动规则。按效果指定的方向与距离移动，并结算路径中泰坦、地形及障碍产生的影响。</td></tr>
 </table></div>
 <div class="section"><h2>Cycle II · 深渊守望者 (Abysswatchers)</h2><table><tr><th>关键词（中文 / English）</th><th>规则说明</th></tr>
 <tr><td class="en">高级跳跃<span class="term-en">Advanced Jump</span></td><td class="zh">在移动（无论是否主动移动）开始时激活本能力。直到本次移动结束前，你可以忽略单块地形板块上的1格或2个相邻格（包括障碍）。本能力无法在被击倒的情况下使用，即使是被动移动也是如此。</td></tr>
@@ -282,7 +283,7 @@
 <tr><td class="en">Commit (X)（Cycle V更新）</td><td class="zh">献祭(X)(Cycle V更新)：使用此武器攻击时，需支付括号中标明的代价(本次更新新增了神浆token与苦痛token两种可选代价形式)。</td></tr>
 <tr><td class="en">Deny</td><td class="zh">拒斥：当你武器有效范围内的原初者即将消散、光影遁形或闪烁时，无视该消散/光影遁形/闪烁效果并执行一次攻击，同时无视消散、光影遁形与闪烁反应。随后获得一枚疲劳token并抽取一张奥波尔卡。</td></tr>
 <tr><td class="en">Evasion Spiral X</td><td class="zh">闪避螺旋X：闪避骰步骤中，你可以重投至多X次成功闪避，但每重投一次闪避就损失-1疲劳。若以此方式重投暴击骰，原始结果不会为你提供暴击闪避机会。</td></tr>
-<tr><td class="en">Fearless</td><td class="zh">无畏：免疫畏惧与惊惧效果。</td></tr>
+<tr><td class="en">无畏<span class="term-en">Fearless</span></td><td class="zh">免疫畏惧与恐惧效果。</td></tr>
 <tr><td class="en">Harpooned</td><td class="zh">鱼叉钩连：当你的攻击命中且你因此与原初者相邻时，立即移动到制高点。移动到你武器有效范围之外不会导致连锁中断。</td></tr>
 <tr><td class="en">Inkblot</td><td class="zh">墨渍：在原初者所在位置下方放置一枚墨渍地形地块。</td></tr>
 <tr><td class="en">Light Void</td><td class="zh">光之虚空：带有「光之虚空」关键词的地块空间永远不被视为处于光照范围内；若你占据此类地块的任意空间，你将无法检定自身的光照范围。</td></tr>
@@ -310,7 +311,7 @@
 <tr><td class="en">Ur-Pull X</td><td class="zh">太古拉近X：朝太古金羊毛方向拉近X格。若拉近会迫使太古金羊毛离开黑色深渊地块，则拉近在此停止。视为一次拉近效果。</td></tr>
 <tr><td class="en">Vanish X</td><td class="zh">消散X：将福波斯之龙朝最近的棋盘边缘方向移动X格(不转向)，并无视与目标或攻击方泰坦正对的棋盘边缘。若此移动会使福波斯之龙越过棋盘边缘或离开所有光照范围，它将消失(从战斗盘上移除)。当福波斯之龙位于战斗盘之外时，它不会受到任何方式的影响。</td></tr>
 </table></div>
-<div class="count">共收录 266 条关键词(Core 76 · Cycle I 9 · Cycle II 56 · Cycle III 53 · Cycle IV 36 · Cycle V 36)</div>
+<div class="count">共收录 267 条关键词(Core 76 · Cycle I 10 · Cycle II 56 · Cycle III 53 · Cycle IV 36 · Cycle V 36)</div>
 </div>
 </body>
 </html>

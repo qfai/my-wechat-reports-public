@@ -3,97 +3,191 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aeon Trespass: Odyssey 卡牌表</title>
+<title>ATO 卡牌编号清点表</title>
 <style>
-  body { margin: 0; background: #101819; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif; }
-  .page { max-width: 920px; margin: 0 auto; padding: 28px 16px 52px; background: #172324; color: #e7efed; line-height: 1.58; }
-  .hero { margin: 0 0 18px; padding: 21px 18px; border: 1px solid #52696a; border-radius: 12px; background: #213032; }
-  .title { margin: 0 0 5px; color: #e9c870; font-size: 27px; line-height: 1.25; }
-  .subtitle { margin: 0; color: #b5c8c5; font-size: 14px; }
-  .meta { margin: 8px 0 0; color: #829794; font-size: 12px; }
-  .note { margin: 0 0 20px; padding: 12px 14px; border-left: 4px solid #d6b55d; border-radius: 6px; background: #302c20; color: #ecdfb8; font-size: 13px; }
-  .summary { margin: 0 0 22px; }
-  .stat { display: inline-block; min-width: 108px; margin: 0 7px 7px 0; padding: 9px 11px; border: 1px solid #465b5b; border-radius: 7px; background: #202e2f; }
-  .stat strong { display: block; color: #e9c870; font-size: 20px; }
-  .stat span { color: #9db0ad; font-size: 11px; }
-  .section { margin: 0 0 27px; }
-  .section h2 { margin: 0 0 10px; padding: 0 0 7px; border-bottom: 1px solid #465b5b; color: #8bd1c6; font-size: 18px; }
-  .section p { margin: 6px 0; }
-  table { width: 100%; border-collapse: collapse; table-layout: fixed; }
-  th, td { padding: 8px 9px; border: 1px solid #405455; text-align: left; vertical-align: top; font-size: 12px; word-break: break-word; }
-  th { background: #293a3b; color: #bdcbc9; font-weight: 700; }
-  td.name { width: 25%; color: #e9c870; font-weight: 700; }
-  td.type { width: 18%; color: #a8c8c2; }
-  td.detail { color: #d9e3e1; }
-  .empty { padding: 15px 12px; border: 1px dashed #52696a; border-radius: 7px; background: #1d2a2b; color: #93a6a3; text-align: center; font-size: 13px; }
-  .tag { display: inline-block; margin: 2px 4px 2px 0; padding: 2px 7px; border: 1px solid #607675; border-radius: 10px; color: #b9ccca; font-size: 11px; }
-  .footer { margin: 30px 0 0; padding: 13px 0 0; border-top: 1px solid #465b5b; color: #809390; text-align: center; font-size: 11px; }
+  body { margin: 0; background: #eeeae1; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif; }
+  .page { max-width: 900px; margin: 0 auto; padding: 26px 14px 48px; background: #f8f4eb; color: #29251f; line-height: 1.55; }
+  .hero { margin: 0 0 18px; padding: 22px 18px; background: #26211c; color: #f5efe3; border-radius: 10px; }
+  .eyebrow { margin: 0 0 7px; color: #d7cbb9; font-size: 11px; letter-spacing: 1px; }
+  .title { margin: 0; color: #ffffff; font-size: 27px; line-height: 1.25; }
+  .subtitle { margin: 5px 0 0; color: #e0b66a; font-size: 15px; }
+  .meta { margin: 7px 0 0; color: #aaa197; font-size: 11px; }
+  .note { margin: 0 0 18px; padding: 12px 14px; border-left: 4px solid #c58c35; border-radius: 6px; background: #fff8e8; color: #654b24; font-size: 13px; }
+  .summary { display: table; width: 100%; margin: 0 0 22px; border-collapse: collapse; }
+  .stat { display: table-cell; width: 33%; padding: 10px 8px; border: 1px solid #ded7ca; background: #ffffff; text-align: center; }
+  .stat strong { display: block; color: #24211d; font-size: 22px; }
+  .stat span { color: #8a8175; font-size: 11px; }
+  .series { margin: 0 0 28px; }
+  .series-title { margin: 0 0 10px; padding: 8px 10px; border-radius: 5px; font-size: 18px; }
+  .mini-title { background: #f5ead5; color: #a66c22; }
+  .standard-title { background: #e6f0f2; color: #23667a; }
+  .tarot-title { background: #eee6f5; color: #65428b; }
+  .group { margin: 0 0 12px; padding: 13px 12px; border: 1px solid #ddd6ca; border-radius: 8px; background: #ffffff; }
+  .group-head { margin: 0 0 8px; }
+  .group-name { color: #28231e; font-size: 17px; font-weight: 800; }
+  .count { float: right; padding: 2px 8px; border-radius: 4px; background: #f4efe5; color: #8c6427; font-size: 12px; font-weight: 700; }
+  .first { margin: 0 0 8px; padding: 6px 8px; background: #faf7f0; color: #3e3932; font-size: 12px; }
+  .first strong { display: inline-block; margin-right: 7px; padding: 2px 6px; border-radius: 3px; background: #bd7b26; color: #ffffff; font-size: 11px; }
+  .standard .first strong { background: #176a89; }
+  .tarot .first strong { background: #68418e; }
+  .codes { margin: 0; }
+  .code { display: inline-block; margin: 3px 3px 3px 0; padding: 4px 7px; border-radius: 3px; background: #f4f5f3; color: #292929; font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; font-size: 11px; font-weight: 650; }
+  .extra { display: inline-block; margin: 3px 3px 3px 0; padding: 4px 7px; border-radius: 3px; background: #fff4dc; color: #95651e; font-size: 11px; font-weight: 700; }
+  .warning { margin: 0 0 7px; color: #9b681f; font-size: 12px; font-weight: 700; }
+  .footer { margin: 28px 0 0; padding: 12px 0 0; border-top: 1px solid #d7d0c4; color: #8b8276; text-align: center; font-size: 11px; }
 </style>
 </head>
 <body>
 <div class="page">
   <div class="hero">
-    <h1 class="title">Aeon Trespass: Odyssey 卡牌表</h1>
-    <p class="subtitle">正式中文卡名 · English · 类型 · 来源 · 效果与关键词</p>
-    <p class="meta">Public Card Reference · 创建于 2026-09-16</p>
+    <p class="eyebrow">CARD INDEX · 编号索引</p>
+    <h1 class="title">卡牌编号检索表</h1>
+    <p class="subtitle">编号段分布总览</p>
+    <p class="meta">迷你 · 标准 · 塔罗｜1598 张</p>
   </div>
 
-  <div class="note"><strong>录入原则：</strong>优先依据你提供的正式中文版卡牌图片记录卡名和规则；英文名、编号与来源以卡牌实物为准。卡牌正文只做便于检索的简明概括，完整判定仍以卡牌原文和规则书为准。</div>
+  <div class="note"><strong>用途：</strong>用于核对整套桌游是否缺牌。每组应同时核对总张数与全部编号段；“伤口”文字条目没有编号，已单独计入对应组张数。以下内容严格按用户提供的清点图录入。</div>
 
   <div class="summary">
-    <div class="stat"><strong>0</strong><span>已录入卡牌</span></div>
-    <div class="stat"><strong>6</strong><span>核心与周期分区</span></div>
-    <div class="stat"><strong>0</strong><span>待核对词条</span></div>
+    <div class="stat"><strong>1598</strong><span>卡牌总数</span></div>
+    <div class="stat"><strong>3</strong><span>大系列</span></div>
+    <div class="stat"><strong>20</strong><span>清点分组</span></div>
   </div>
 
-  <div class="section">
-    <h2>字段说明</h2>
-    <p><span class="tag">中文名</span><span class="tag">English</span><span class="tag">卡牌类型</span><span class="tag">周期 / 来源</span><span class="tag">效果摘要</span><span class="tag">关键词</span><span class="tag">编号 / 备注</span></p>
+  <div class="series">
+    <h2 class="series-title mini-title">迷你系列 · 迷你1–迷你11</h2>
+
+    <div class="group">
+      <div class="group-head"><span class="group-name">迷你1</span><span class="count">72 张</span></div>
+      <div class="first"><strong>首张</strong>AB0075</div>
+      <div class="codes"><span class="code">AB0075–AB0106</span><span class="code">AB0108–AB0116</span><span class="code">CB1636–CB1666</span></div>
+    </div>
+
+    <div class="group">
+      <div class="group-head"><span class="group-name">迷你2</span><span class="count">73 张</span></div>
+      <div class="first"><strong>首张</strong>CB1667</div>
+      <div class="codes"><span class="code">AC0053–AC0071</span><span class="code">BB1209–BB1238</span><span class="code">BB1241–BB1253</span><span class="code">CB1667–CB1677</span></div>
+    </div>
+
+    <div class="group">
+      <div class="group-head"><span class="group-name">迷你3</span><span class="count">72 张</span></div>
+      <div class="first"><strong>首张</strong>AC0072</div>
+      <div class="codes"><span class="code">AC0072–AC0074</span><span class="code">AH0147–AH0155</span><span class="code">AH0623–AH0626</span><span class="code">AJ0156–AJ0157</span><span class="code">BC1172–BC1176</span><span class="code">BC1178–BC1203</span><span class="code">BW0972–BW0976</span><span class="code">BW0981</span><span class="code">CC1557–CC1567</span><span class="code">CW1547–CW1551</span><span class="code">CW1556</span></div>
+    </div>
+
+    <div class="group">
+      <div class="group-head"><span class="group-name">迷你4</span><span class="count">72 张</span></div>
+      <div class="first"><strong>首张</strong>AJ0158</div>
+      <div class="codes"><span class="code">AJ0158–AJ0227</span><span class="code">AW0286–AW0287</span></div>
+    </div>
+
+    <div class="group">
+      <div class="group-head"><span class="group-name">迷你5</span><span class="count">72 张</span></div>
+      <div class="first"><strong>首张</strong>AJ0228</div>
+      <div class="codes"><span class="code">AJ0228–AJ0256</span><span class="code">AJ0261–AJ0264</span><span class="code">AJ0266–AJ0267</span><span class="code">AJ0271–AJ0272</span><span class="code">AJ0275–AJ0278</span><span class="code">BJ0827–BJ0828</span><span class="code">BJ0831–BJ0838</span><span class="code">BJ0841–BJ0857</span><span class="code">BJ0862–BJ0865</span></div>
+    </div>
+
+    <div class="group">
+      <div class="group-head"><span class="group-name">迷你6</span><span class="count">72 张</span></div>
+      <div class="first"><strong>首张</strong>BJ0866</div>
+      <div class="codes"><span class="code">BJ0866–BJ0882</span><span class="code">BJ0885–BJ0914</span><span class="code">BJ0917–BJ0927</span><span class="code">BJ0930–BJ0938</span><span class="code">BJ0946–BJ0950</span></div>
+    </div>
+
+    <div class="group">
+      <div class="group-head"><span class="group-name">迷你7</span><span class="count">72 张</span></div>
+      <div class="first"><strong>首张</strong>BJ0951</div>
+      <div class="codes"><span class="code">AW0284–AW0285</span><span class="code">AW0288–AW0290</span><span class="code">BJ0829–BJ0830</span><span class="code">BJ0839–BJ0840</span><span class="code">BJ0860–BJ0861</span><span class="code">BJ0883–BJ0884</span><span class="code">BJ0915–BJ0916</span><span class="code">BJ0928–BJ0929</span><span class="code">BJ0951–BJ0953</span><span class="code">BJ0965–BJ0969</span><span class="code">BW0977–BW0980</span><span class="code">CJ1170–CJ1171</span><span class="code">CJ1389–CJ1422</span><span class="code">CJ1429–CJ1431</span><span class="code">CW1552–CW1555</span></div>
+    </div>
+
+    <div class="group">
+      <div class="group-head"><span class="group-name">迷你8</span><span class="count">72 张</span></div>
+      <div class="first"><strong>首张</strong>CJ1432</div>
+      <div class="codes"><span class="code">CJ1432–CJ1471</span><span class="code">CJ1476–CJ1488</span><span class="code">CJ1490–CJ1501</span><span class="code">CJ1504–CJ1509</span><span class="code">CJ1518</span></div>
+    </div>
+
+    <div class="group">
+      <div class="group-head"><span class="group-name">迷你9</span><span class="count">72 张</span></div>
+      <div class="first"><strong>首张</strong>CJ1519</div>
+      <div class="codes"><span class="code">AM0307–AM0335</span><span class="code">BM0678–BM0681</span><span class="code">CJ1423–CJ1428</span><span class="code">CJ1472–CJ1475</span><span class="code">CJ1510–CJ1515</span><span class="code">CJ1519–CJ1526</span><span class="code">CJ1529</span><span class="code">CJ1536–CJ1545</span><span class="code">CM1299–CM1302</span></div>
+    </div>
+
+    <div class="group">
+      <div class="group-head"><span class="group-name">迷你10</span><span class="count">72 张</span></div>
+      <div class="first"><strong>首张</strong>AM0336</div>
+      <div class="codes"><span class="code">AL0299–AL0305</span><span class="code">AM0336–AM0348</span><span class="code">AM0350–AM0354</span><span class="code">AM0356–AM0359</span><span class="code">BL0657–BL0660</span><span class="code">BL0665–BL0673</span><span class="code">BM0682–BM0688</span><span class="code">CL1283–CL1298</span><span class="code">CM1303–CM1309</span></div>
+    </div>
+
+    <div class="group">
+      <div class="group-head"><span class="group-name">迷你11</span><span class="count">103 张</span></div>
+      <div class="first"><strong>首张</strong>AL0306</div>
+      <div class="codes"><span class="code">AB0107</span><span class="code">AJ0257–AJ0260</span><span class="code">AJ0268–AJ0270</span><span class="code">AJ0273–AJ0274</span><span class="code">AJ0279–AJ0283</span><span class="code">AL0306</span><span class="code">AM0349</span><span class="code">AM0355</span><span class="code">BC1177</span><span class="code">BC1204</span><span class="code">BJ0858–BJ0859</span><span class="code">BJ0939–BJ0945</span><span class="code">BJ0954–BJ0964</span><span class="code">BJ0970–BJ0971</span><span class="code">BL0661–BL0664</span><span class="code">BL0674–BL0676</span><span class="code">BM0689–BM0690</span><span class="code">BY1048–BY1050</span><span class="code">CJ1502–CJ1503</span><span class="code">CJ1516–CJ1517</span><span class="code">CJ1527–CJ1528</span><span class="code">CJ1530–CJ1535</span><span class="code">CJ1546</span><span class="code">CY1635</span><span class="code">ZJ0692</span><span class="code">ZJ1824–ZJ1849</span><span class="code">ZZ1854–ZZ1855</span><span class="code">ZZ1860–ZZ1861</span><span class="code">ZZ1866–ZZ1867</span><span class="code">ZZ1874–ZZ1875</span></div>
+    </div>
   </div>
 
-  <div class="section">
-    <h2>Core · 核心内容</h2>
-    <div class="empty">等待录入核心卡牌图片。</div>
+  <div class="series standard">
+    <h2 class="series-title standard-title">标准系列 · 标准1–标准8</h2>
+
+    <div class="group">
+      <div class="group-head"><span class="group-name">标准1</span><span class="count">88 张</span></div>
+      <div class="first"><strong>首张</strong>AR0394</div>
+      <div class="codes"><span class="code">AR0394–AR0412</span><span class="code">AR0464–AR0482</span><span class="code">AR0522–AR0540</span><span class="code">AS0415–AS0427</span><span class="code">AS0543–AS0560</span></div>
+    </div>
+
+    <div class="group">
+      <div class="group-head"><span class="group-name">标准2</span><span class="count">88 张</span></div>
+      <div class="first"><strong>首张</strong>AS0428</div>
+      <div class="codes"><span class="code">AS0428–AS0432</span><span class="code">AS0485–AS0503</span><span class="code">BR0725–BR0743</span><span class="code">BR0781–BR0799</span><span class="code">BR0801</span><span class="code">BR1070–BR1090</span><span class="code">BS0822</span><span class="code">BS1092–BS1094</span></div>
+    </div>
+
+    <div class="group">
+      <div class="group-head"><span class="group-name">标准3</span><span class="count">89 张</span></div>
+      <div class="first"><strong>首张</strong>BS1095</div>
+      <div class="codes"><span class="code">AG0134–AG0146</span><span class="code">AI0362</span><span class="code">AI0364</span><span class="code">AI0367</span><span class="code">AR0413</span><span class="code">AR0483</span><span class="code">AR0541</span><span class="code">BG0645–BG0653</span><span class="code">BR0744</span><span class="code">BR0800</span><span class="code">BS0746–BS0763</span><span class="code">BS0803–BS0820</span><span class="code">BS1095–BS1109</span><span class="code">CG1270–CG1277</span></div>
+    </div>
+
+    <div class="group">
+      <div class="group-head"><span class="group-name">标准4</span><span class="count">87 张</span></div>
+      <div class="first"><strong>首张</strong>BA0984</div>
+      <div class="codes"><span class="code">AA0003–AA0020</span><span class="code">AA0022</span><span class="code">BA0984–BA1006</span><span class="code">BA1008–BA1011</span><span class="code">BA1013–BA1018</span><span class="code">BA1022–BA1043</span><span class="code">BA1045–BA1047</span><span class="code">CA1570–CA1579</span></div>
+    </div>
+
+    <div class="group">
+      <div class="group-head"><span class="group-name">标准5</span><span class="count">89 张</span></div>
+      <div class="warning">含 6 条“伤口”文字条目，无编号</div>
+      <div class="first"><strong>首张</strong>AA0023</div>
+      <div class="codes"><span class="code">AA0023–AA0027</span><span class="code">AA0031–AA0041</span><span class="code">AA0043–AA0045</span><span class="code">AA0047–AA0050</span><span class="code">AX0446</span><span class="code">AX0517</span><span class="code">BX0715</span><span class="code">BX0764–BX0765</span><span class="code">BX0768</span><span class="code">BX1158</span><span class="code">CA1580–CA1595</span><span class="code">CA1597–CA1606</span><span class="code">CA1610–CA1633</span><span class="code">CT1326</span><span class="code">CT1329</span><span class="code">CX1681</span><span class="extra">伤口 × 6</span></div>
+    </div>
+
+    <div class="group">
+      <div class="group-head"><span class="group-name">标准6</span><span class="count">89 张</span></div>
+      <div class="warning">含 4 条“伤口”文字条目，无编号</div>
+      <div class="first"><strong>首张</strong>伤口</div>
+      <div class="codes"><span class="code">AF0125–AF0133</span><span class="code">AI0361</span><span class="code">AI0366</span><span class="code">AI0368–AI0371</span><span class="code">AN0372–AN0377</span><span class="code">AO0378–AO0385</span><span class="code">BF0636–BF0644</span><span class="code">CF1260–CF1268</span><span class="code">CI1310–CI1317</span><span class="code">CR1343–CR1351</span><span class="code">CR1734–CR1754</span><span class="extra">伤口 × 4</span></div>
+    </div>
+
+    <div class="group">
+      <div class="group-head"><span class="group-name">标准7</span><span class="count">89 张</span></div>
+      <div class="first"><strong>首张</strong>CR1352</div>
+      <div class="codes"><span class="code">CR1352–CR1365</span><span class="code">CR1695–CR1715</span><span class="code">CS1366–CS1383</span><span class="code">CS1716–CS1733</span><span class="code">CS1755–CS1772</span></div>
+    </div>
+
+    <div class="group">
+      <div class="group-head"><span class="group-name">标准8</span><span class="count">102 张</span></div>
+      <div class="first"><strong>首张</strong>AR0582</div>
+      <div class="codes"><span class="code">AR0582–AR0605</span><span class="code">AS0564–AS0581</span><span class="code">BA1021</span><span class="code">BA1044</span><span class="code">BI0691</span><span class="code">BI0693–BI0697</span><span class="code">BI0699–BI0700</span><span class="code">BN0701</span><span class="code">BR1110–BR1130</span><span class="code">BS1131–BS1148</span><span class="code">BX1059–BX1060</span><span class="code">CA1609</span><span class="code">CA1634</span><span class="code">CF1269</span><span class="code">CO1318</span><span class="code">ZZ1858–ZZ1859</span><span class="code">ZZ1864–ZZ1865</span></div>
+    </div>
   </div>
 
-  <div class="section">
-    <h2>Cycle I · 第一周期</h2>
-    <div class="empty">等待录入 Cycle I 卡牌图片。</div>
+  <div class="series tarot">
+    <h2 class="series-title tarot-title">塔罗系列</h2>
+    <div class="group">
+      <div class="group-head"><span class="group-name">塔罗1</span><span class="count">53 张</span></div>
+      <div class="first"><strong>首张</strong>AA0001</div>
+      <div class="codes"><span class="code">AA0001–AA0002</span><span class="code">AA0021</span><span class="code">AA0028–AA0030</span><span class="code">AA0042</span><span class="code">AA0046</span><span class="code">AA0051–AA0052</span><span class="code">AP0389–AP0393</span><span class="code">AQ0386–AQ0388</span><span class="code">BA0982–BA0983</span><span class="code">BA1007</span><span class="code">BA1012</span><span class="code">BA1019–BA1020</span><span class="code">BP0705–BP0710</span><span class="code">BQ0702–BQ0704</span><span class="code">CA1568–CA1569</span><span class="code">CA1596</span><span class="code">CA1607–CA1608</span><span class="code">CP1321–CP1325</span><span class="code">CQ1319–CQ1320</span><span class="code">ZZ1852–ZZ1853</span><span class="code">ZZ1856–ZZ1857</span><span class="code">ZZ1862–ZZ1863</span><span class="code">ZZ1868–ZZ1869</span></div>
+    </div>
   </div>
 
-  <div class="section">
-    <h2>Cycle II · 第二周期</h2>
-    <div class="empty">等待录入 Cycle II 卡牌图片。</div>
-  </div>
-
-  <div class="section">
-    <h2>Cycle III · 第三周期</h2>
-    <div class="empty">等待录入 Cycle III 卡牌图片。</div>
-  </div>
-
-  <div class="section">
-    <h2>Cycle IV · 第四周期</h2>
-    <div class="empty">等待录入 Cycle IV 卡牌图片。</div>
-  </div>
-
-  <div class="section">
-    <h2>Cycle V · 第五周期</h2>
-    <div class="empty">等待录入 Cycle V 卡牌图片。</div>
-  </div>
-
-  <div class="section">
-    <h2>卡牌记录格式</h2>
-    <table>
-      <tr><th>卡牌</th><th>类型 / 来源</th><th>效果与备注</th></tr>
-      <tr>
-        <td class="name">正式中文名<br><span class="tag">English Name</span></td>
-        <td class="type">卡牌类型<br>Cycle / 编号</td>
-        <td class="detail">规则效果的中文摘要；保留关键数值、触发时点、持续时间、关键词和关联卡牌。</td>
-      </tr>
-    </table>
-  </div>
-
-  <div class="footer">当前为空白卡牌索引；收到正式中文版卡牌图片后持续更新。</div>
+  <div class="footer">清点总数：迷你系列 824 张 · 标准系列 721 张 · 塔罗系列 53 张 · 合计 1598 张</div>
 </div>
 </body>
 </html>

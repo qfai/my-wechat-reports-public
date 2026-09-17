@@ -28,6 +28,12 @@
   .icon.food { background: #4b522d; color: #eff4c6; }
   .icon.enemy { background: #422d35; color: #f5dce6; }
   .icon.reward { background: #665126; color: #fff1b5; }
+  .rules-table { width: 100%; margin: 0 0 14px; border-collapse: collapse; table-layout: fixed; }
+  .rules-table th, .rules-table td { padding: 7px 4px; border: 1px solid #a68b68; text-align: center; font-size: 12px; word-break: break-word; }
+  .rules-table th { background: #49352d; color: #fff0d2; font-weight: 700; }
+  .rules-table td { background: #f8eed7; color: #49382c; }
+  .rules-table td.level { background: #dec8a2; color: #5b3027; font-weight: 700; }
+  .base-xp { display: block; color: #846c54; font-size: 10px; }
   .footer { margin: 28px 0 0; color: #765f49; font-size: 12px; text-align: center; }
 </style>
 </head>
@@ -82,6 +88,100 @@
     <div class="card">
       <div class="term">专家 <span class="region">最高难度</span></div>
       <p class="desc">冒险者在作战中执行的每个额外交战行动，都会使其获得 2 点疲劳。冒险者必须弃置一件物品才能执行自己的“冒险者休息”步骤；休息时从冷却轨移除 1 颗骰子，并治疗 1 点生命值。</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">章节结束难度敌人池</h2>
+
+    <div class="card">
+      <div class="term">计算方法</div>
+      <p class="desc">每个公会任务的最后步骤都会引发一场作战。该作战使用的敌人池数值依据所选难度等级，而非小队经验值换算。先选择对应章节的表格，再按难度等级和玩家数量查找数值。括号中的数值是基础经验值，代表每增加一名玩家时所使用的敌人池基础值。</p>
+      <p class="desc">示例：第 2 章、熟手难度、2 名玩家的敌人池数值为 58，即基础经验值 29 乘以 2 名冒险者。</p>
+    </div>
+
+    <div class="card">
+      <div class="term">章节 1</div>
+      <table class="rules-table">
+        <tr><th>难度</th><th>1 名</th><th>2 名</th><th>3 名</th><th>4 名</th></tr>
+        <tr>
+          <td class="level">学徒</td>
+          <td>13<span class="base-xp">基础 13</span></td>
+          <td>26<span class="base-xp">基础 13</span></td>
+          <td>42<span class="base-xp">基础 14</span></td>
+          <td>56<span class="base-xp">基础 14</span></td>
+        </tr>
+        <tr>
+          <td class="level">熟手</td>
+          <td>16<span class="base-xp">基础 16</span></td>
+          <td>32<span class="base-xp">基础 16</span></td>
+          <td>48<span class="base-xp">基础 16</span></td>
+          <td>64<span class="base-xp">基础 16</span></td>
+        </tr>
+        <tr>
+          <td class="level">专家</td>
+          <td>18<span class="base-xp">基础 18</span></td>
+          <td>36<span class="base-xp">基础 18</span></td>
+          <td>54<span class="base-xp">基础 18</span></td>
+          <td>72<span class="base-xp">基础 18</span></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="term">章节 2</div>
+      <table class="rules-table">
+        <tr><th>难度</th><th>1 名</th><th>2 名</th><th>3 名</th><th>4 名</th></tr>
+        <tr>
+          <td class="level">学徒</td>
+          <td>27<span class="base-xp">基础 27</span></td>
+          <td>52<span class="base-xp">基础 26</span></td>
+          <td>90<span class="base-xp">基础 30</span></td>
+          <td>120<span class="base-xp">基础 30</span></td>
+        </tr>
+        <tr>
+          <td class="level">熟手</td>
+          <td>29<span class="base-xp">基础 29</span></td>
+          <td>58<span class="base-xp">基础 29</span></td>
+          <td>96<span class="base-xp">基础 32</span></td>
+          <td>128<span class="base-xp">基础 32</span></td>
+        </tr>
+        <tr>
+          <td class="level">专家</td>
+          <td>33<span class="base-xp">基础 33</span></td>
+          <td>64<span class="base-xp">基础 32</span></td>
+          <td>102<span class="base-xp">基础 34</span></td>
+          <td>132<span class="base-xp">基础 33</span></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="term">章节 3</div>
+      <table class="rules-table">
+        <tr><th>难度</th><th>1 名</th><th>2 名</th><th>3 名</th><th>4 名</th></tr>
+        <tr>
+          <td class="level">学徒</td>
+          <td>32<span class="base-xp">基础 32</span></td>
+          <td>62<span class="base-xp">基础 31</span></td>
+          <td>96<span class="base-xp">基础 32</span></td>
+          <td>128<span class="base-xp">基础 32</span></td>
+        </tr>
+        <tr>
+          <td class="level">熟手</td>
+          <td>34<span class="base-xp">基础 34</span></td>
+          <td>68<span class="base-xp">基础 34</span></td>
+          <td>102<span class="base-xp">基础 34</span></td>
+          <td>136<span class="base-xp">基础 34</span></td>
+        </tr>
+        <tr>
+          <td class="level">专家</td>
+          <td>37<span class="base-xp">基础 37</span></td>
+          <td>74<span class="base-xp">基础 37</span></td>
+          <td>111<span class="base-xp">基础 37</span></td>
+          <td>152<span class="base-xp">基础 38</span></td>
+        </tr>
+      </table>
     </div>
   </div>
 

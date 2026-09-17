@@ -30,6 +30,9 @@
   .rules-table td { background: #f8eed7; color: #49382c; }
   .rules-table td.level { background: #dec8a2; color: #5b3027; font-weight: 700; }
   .base-xp { display: block; color: #846c54; font-size: 10px; }
+  .figure { margin: 0; padding: 10px; background: #e4d0a8; border: 1px solid #b69a72; border-radius: 7px; text-align: center; }
+  .figure img { display: block; width: 100%; height: auto; margin: 0 auto 7px; border-radius: 4px; }
+  .figure-caption { margin: 0; color: #6d543f; font-size: 12px; }
   .footer { margin: 28px 0 0; color: #765f49; font-size: 12px; text-align: center; }
 </style>
 </head>
@@ -478,6 +481,48 @@
       <div class="term">“你”</div>
       <p class="desc">卡牌文本和其他效果经常将玩家称为“你”，其指代会根据上下文变化。陆地卡牌、支线任务卡牌和任务步骤中的“你”通常代表整个小队；例如任务要求“你”前往某地点时，指移动陆地地图上的小队指示物。</p>
       <p class="desc">职业卡牌、物品卡牌、技能能力及类似效果中的“你”通常代表单个冒险者，由该冒险者的玩家负责作出相关决定。</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">核心规则：同伴回合</h2>
+
+    <div class="card">
+      <div class="term">同伴回合</div>
+      <p class="desc">同伴会在所有冒险者的回合都结束后立即执行其回合。同伴的回合顺位由小队决定。如果同伴的描述写明由整个小队控制，则由小队决定该同伴在本回合由哪位玩家控制。</p>
+      <p class="desc">同伴在其回合中通常可以移动、掷战斗技能骰并进行交战，具体按照同伴回合流程及该单位规则结算。</p>
+    </div>
+
+    <div class="card">
+      <div class="term">1. 回合开始</div>
+      <p class="desc">结算所有在此时点触发的能力，例如同伴筹码上的状态效果或技能。</p>
+    </div>
+
+    <div class="card">
+      <div class="term">2. 移动</div>
+      <p class="desc">可以将同伴移动最多 2 个六角格。控制玩家可以选择同伴的移动路线，而不必遵循常规敌人的移动优先级。</p>
+    </div>
+
+    <div class="card">
+      <div class="term">3. 交战</div>
+      <p class="desc">如果同伴进行交战，先参考同伴的范围和目标图标，在其视线与范围内选择目标，并忽略同伴的优先级图标。</p>
+      <p class="desc">拿取同伴的所有战斗骰并投掷。如果同伴可以与范围内的多个目标交战，只投掷一次骰子，并在后续步骤中分别对每个目标结算骰子结果与伤害。</p>
+      <p class="desc">结算伤害后，冒险者、同伴或其他敌人可以结算在正常交战后触发的能力，若可结算。</p>
+    </div>
+
+    <div class="card">
+      <div class="term">4. 回合结束</div>
+      <p class="desc">结算所有在此时点触发的能力。随后，如果还有其他同伴，则由下一个同伴执行其回合。</p>
+    </div>
+
+    <div class="card">
+      <div class="term">同伴技能</div>
+      <p class="desc">部分同伴筹码会列出一个或多个技能。多数同伴技能是强制执行的；每个技能必须在其规定时点结算，若可以结算。如果一个同伴与多个目标交战，则每个目标都会受到该同伴相应技能的影响。</p>
+    </div>
+
+    <div class="figure">
+      <img src="assets/elder-scrolls-betrayal-second-era/unit-classification.jpg" alt="单位分类图">
+      <p class="figure-caption">单位分类：小队、冒险者、盟友、同伴、敌人及任务单位之间的关系。</p>
     </div>
   </div>
 

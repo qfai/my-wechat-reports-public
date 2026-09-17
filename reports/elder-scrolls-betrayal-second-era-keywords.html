@@ -21,6 +21,13 @@
   .status-grid { margin: 0; }
   .status { margin: 0 0 9px; padding: 12px 13px; background: #e7d4af; border-left: 4px solid #4f3429; border-radius: 5px; }
   .status-name { margin: 0 0 3px; color: #4e2b23; font-size: 16px; font-weight: 700; }
+  .icon { display: inline-block; margin: 1px 2px; padding: 1px 6px; background: #392b25; color: #fff0cf; border: 1px solid #765744; border-radius: 9px; font-size: 12px; font-weight: 700; white-space: nowrap; }
+  .icon.axe { background: #493328; color: #ffdca7; }
+  .icon.heart { background: #6c2f2f; color: #ffe2d4; }
+  .icon.magic { background: #343250; color: #eee9ff; }
+  .icon.food { background: #4b522d; color: #eff4c6; }
+  .icon.enemy { background: #422d35; color: #f5dce6; }
+  .icon.reward { background: #665126; color: #fff1b5; }
   .footer { margin: 28px 0 0; color: #765f49; font-size: 12px; text-align: center; }
 </style>
 </head>
@@ -33,7 +40,10 @@
   </div>
 
   <div class="note">
-    本页根据用户提供的中文参考卡整理。原卡中以图标表示的生命值、作战形式和物品类型等数值，使用相关能力时仍应对照单位、技能骰或物品卡上的对应图标。
+    本页根据用户提供的中文参考卡整理。规则中的图标已用带名称的内联徽标表示，例如
+    <span class="icon axe">🪓 斧头卡牌</span>、
+    <span class="icon heart">♥ 生命值</span>和
+    <span class="icon magic">✦ 魔法形式</span>；具体数值仍应查看对应单位、技能骰或物品卡。
   </div>
 
   <div class="section">
@@ -115,7 +125,7 @@
 
     <div class="card">
       <div class="term">冻疮</div>
-      <p class="desc">在此单位与一位没有使用指定图标卡牌的冒险者交战后，该冒险者获得等同于此单位生命值图标数值的轻度疲劳骰。</p>
+      <p class="desc">在此单位与一位没有使用 <span class="icon axe">🪓 斧头卡牌</span> 的冒险者交战后，该冒险者获得等同于此单位 <span class="icon heart">♥ 生命值</span> 的轻度疲劳骰。</p>
     </div>
 
     <div class="card">
@@ -130,7 +140,7 @@
 
     <div class="card">
       <div class="term">粉碎</div>
-      <p class="desc">在每个回合中，当此单位首次被一位没有使用指定图标卡牌超负荷效果的冒险者交战时，该冒险者必须在本次交战后弃置其预备槽中的 1 张武器卡牌。</p>
+      <p class="desc">在每个回合中，当此单位首次被一位没有使用 <span class="icon axe">🪓 斧头卡牌</span> 超负荷效果的冒险者交战时，该冒险者必须在本次交战后弃置其预备槽中的 1 张武器卡牌。</p>
     </div>
 
     <div class="card">
@@ -170,7 +180,7 @@
 
     <div class="card">
       <div class="term">恢复</div>
-      <p class="desc">在此单位的回合开始时，其治疗等同于生命值图标数值的生命值。</p>
+      <p class="desc">在此单位的回合开始时，其治疗等同于 <span class="icon heart">♥ 生命值</span> 图标数值的生命值。</p>
     </div>
 
     <div class="card">
@@ -185,7 +195,7 @@
 
     <div class="card">
       <div class="term">奖励</div>
-      <p class="desc">在此单位被击败后，每位冒险者选择并获得以下奖励之一：1 份图示奖励、5 点坚韧点，或将生命属性值提升 1 点（若可能的话）。</p>
+      <p class="desc">在此单位被击败后，每位冒险者选择并获得以下奖励之一：1 份 <span class="icon reward">▣ 奖励资源</span>、5 点坚韧点，或将生命属性值提升 1 点（若可能的话）。</p>
     </div>
 
     <div class="card">
@@ -195,7 +205,7 @@
 
     <div class="card">
       <div class="term">领主</div>
-      <p class="desc">在此单位的回合开始时，从敌人袋中拿取 1 名 5 级敌人放到一旁。如果没有可用的 5 级敌人，则在本回合的交战中，此单位的战斗值加 2。在此单位的回合结束时，将放到一旁的单位部署至距离其最近且未被占据的六角格。</p>
+      <p class="desc">在此单位的回合开始时，从敌人袋中拿取 1 名 <span class="icon enemy">☠ 5 级敌人</span> 放到一旁。如果没有可用的 5 级敌人，则在本回合的交战中，此单位的战斗值加 2。在此单位的回合结束时，将放到一旁的单位部署至距离其最近且未被占据的六角格。</p>
     </div>
 
     <div class="card">
@@ -205,7 +215,7 @@
 
     <div class="card">
       <div class="term">驱散</div>
-      <p class="desc">在一位指定作战形式的冒险者或指定类型单位与此单位交战后，此单位对交战单位造成等同于其生命值图标数值的真实伤害，即使此单位被击败。</p>
+      <p class="desc">在一位 <span class="icon magic">✦ 魔法作战形式</span> 的冒险者或 1 个 <span class="icon enemy">☠ 指定敌人单位</span> 与此单位交战后，此单位对交战单位造成等同于其 <span class="icon heart">♥ 生命值</span> 图标数值的真实伤害，即使此单位被击败。</p>
     </div>
 
     <div class="card">
@@ -254,7 +264,7 @@
 
     <div class="card">
       <div class="term">死灵法术</div>
-      <p class="desc">在此单位的回合结束时，将被击败敌人中符合生命值限制的单位部署至距离此单位最近且未被占据的六角格。该新敌人在本作战轮不执行回合。</p>
+      <p class="desc">在此单位的回合结束时，将被击败敌人中生命值不高于此单位 <span class="icon heart">♥ 生命值</span> 图标数值的单位，部署至距离此单位最近且未被占据的六角格。该新敌人在本作战轮不执行回合。</p>
     </div>
 
     <div class="card">
@@ -269,7 +279,7 @@
 
     <div class="card">
       <div class="term">偷盗</div>
-      <p class="desc">当此单位确定一个目标后，投掷 1 颗 D6。如果掷骰结果大于等于目标当前生命值，则该目标弃置其装备箱中的 1 张非指定图标物品卡牌。</p>
+      <p class="desc">当此单位确定一个目标后，投掷 1 颗 D6。如果掷骰结果大于等于目标当前生命值，则该目标弃置其预备槽中的 1 张非 <span class="icon food">● 食物物品</span> 卡牌。</p>
     </div>
 
     <div class="card">
@@ -279,7 +289,7 @@
 
     <div class="card">
       <div class="term">虚无缥缈</div>
-      <p class="desc">当此单位被 1 位非指定作战形式的冒险者造成伤害时，此单位防止等同于其生命值图标数值的伤害。</p>
+      <p class="desc">当此单位被 1 位非 <span class="icon magic">✦ 魔法作战形式</span> 的冒险者造成伤害时，此单位防止等同于其 <span class="icon heart">♥ 生命值</span> 图标数值的伤害。</p>
     </div>
 
     <div class="card">

@@ -21,13 +21,9 @@
   .status-grid { margin: 0; }
   .status { margin: 0 0 9px; padding: 12px 13px; background: #e7d4af; border-left: 4px solid #4f3429; border-radius: 5px; }
   .status-name { margin: 0 0 3px; color: #4e2b23; font-size: 16px; font-weight: 700; }
-  .icon { display: inline-block; margin: 1px 2px; padding: 1px 6px; background: #392b25; color: #fff0cf; border: 1px solid #765744; border-radius: 9px; font-size: 12px; font-weight: 700; white-space: nowrap; }
-  .icon.axe { background: #493328; color: #ffdca7; }
-  .icon.heart { background: #6c2f2f; color: #ffe2d4; }
-  .icon.magic { background: #343250; color: #eee9ff; }
-  .icon.food { background: #4b522d; color: #eff4c6; }
-  .icon.enemy { background: #422d35; color: #f5dce6; }
-  .icon.reward { background: #665126; color: #fff1b5; }
+  .rule-icon { display: inline-block; width: 25px; height: 25px; margin: 0 4px 0 1px; padding: 2px; background: #e4d0a8; border: 1px solid #aa8c64; border-radius: 5px; vertical-align: middle; object-fit: contain; }
+  .rule-icon.wide-icon { width: 70px; }
+  .status-icon { display: inline-block; width: 30px; height: 30px; margin: 0 7px 0 0; vertical-align: middle; object-fit: contain; }
   .rules-table { width: 100%; margin: 0 0 14px; border-collapse: collapse; table-layout: fixed; }
   .rules-table th, .rules-table td { padding: 7px 4px; border: 1px solid #a68b68; text-align: center; font-size: 12px; word-break: break-word; }
   .rules-table th { background: #49352d; color: #fff0d2; font-weight: 700; }
@@ -46,10 +42,10 @@
   </div>
 
   <div class="note">
-    本页根据用户提供的中文参考卡整理。规则中的图标已用带名称的内联徽标表示，例如
-    <span class="icon axe">🪓 斧头卡牌</span>、
-    <span class="icon heart">♥ 生命值</span>和
-    <span class="icon magic">✦ 魔法形式</span>；具体数值仍应查看对应单位、技能骰或物品卡。
+    本页根据用户提供的中文参考卡整理。规则中的符号使用从参考卡裁取并处理的原图图标，例如
+    <img class="rule-icon" src="assets/elder-scrolls-betrayal-second-era/icons/axe-card.png" alt="斧头卡牌">斧头卡牌、
+    <img class="rule-icon" src="assets/elder-scrolls-betrayal-second-era/icons/health.png" alt="生命值">生命值和
+    <img class="rule-icon" src="assets/elder-scrolls-betrayal-second-era/icons/magic-style.png" alt="魔法作战形式">魔法作战形式。具体数值仍应查看对应单位、技能骰或物品卡。
   </div>
 
   <div class="section">
@@ -194,37 +190,37 @@
     </div>
 
     <div class="card">
-      <div class="term"><span class="icon">🛒 商店</span></div>
+      <div class="term"><img class="rule-icon" src="assets/elder-scrolls-betrayal-second-era/icons/town-shop.png" alt="商店">商店</div>
       <p class="desc">商店提供若干物品，冒险者可以将其添加到自己的储存中。城镇的商店部分会列出在该遭遇中抽取并可用的普通卡牌和传奇卡牌数量。冒险者访问商店时，从抽取的卡牌中选择 1 张获取；城镇遭遇结束后，剩余的正面物品卡牌将被弃置。</p>
     </div>
 
     <div class="card">
-      <div class="term"><span class="icon magic">✦ 训练师</span></div>
+      <div class="term"><img class="rule-icon wide-icon" src="assets/elder-scrolls-betrayal-second-era/icons/town-trainer.png" alt="训练师">训练师</div>
       <p class="desc">训练师能让冒险者增加可用的技能线。城镇地名录会注明有多少技能线指示物可选；有些城镇的训练师只提供 1 星座或 2 星座的技能线。</p>
     </div>
 
     <div class="card">
-      <div class="term"><span class="icon heart">♥ 旅馆</span></div>
+      <div class="term"><img class="rule-icon" src="assets/elder-scrolls-betrayal-second-era/icons/health.png" alt="旅馆治疗">旅馆</div>
       <p class="desc">冒险者使用旅馆时，会被治疗到最大生命值。他们必须从冷却轨中移除所有轻度疲劳骰、过度疲劳骰和状态骰，并恢复所有已消耗和已枯竭的战斗技能骰。</p>
     </div>
 
     <div class="card">
-      <div class="term"><span class="icon reward">▣ 任务公告栏</span></div>
+      <div class="term"><img class="rule-icon" src="assets/elder-scrolls-betrayal-second-era/icons/town-quest.png" alt="任务公告栏">任务公告栏</div>
       <p class="desc">一名冒险者代表小队抽取 2 个支线任务，并选择是否接下其中 1 个。未选择的支线任务卡牌会被弃置；如果两个任务都未被接下，则两张卡牌都会被弃置。</p>
     </div>
 
     <div class="card">
-      <div class="term"><span class="icon axe">⚔ 公会亭</span></div>
+      <div class="term"><img class="rule-icon" src="assets/elder-scrolls-betrayal-second-era/icons/town-guild.png" alt="公会亭">公会亭</div>
       <p class="desc">冒险者可以使用公会特有的城镇行动。每个公会的行动都会在设置时所选择的公会卡牌上进行说明。</p>
     </div>
 
     <div class="card">
-      <div class="term"><span class="icon enemy">🏛 城镇广场</span></div>
+      <div class="term"><img class="rule-icon" src="assets/elder-scrolls-betrayal-second-era/icons/town-square.png" alt="城镇广场">城镇广场</div>
       <p class="desc">使用城镇广场的冒险者可以触发其所述能力。每位冒险者在一次城镇遭遇中，从抵达城镇到离开城镇，至多使用城镇广场一次。部分能力可能涉及所有冒险者的群体行动。</p>
     </div>
 
     <div class="card">
-      <div class="term"><span class="icon food">⚗ 炼金站</span></div>
+      <div class="term"><img class="rule-icon" src="assets/elder-scrolls-betrayal-second-era/icons/town-alchemy.png" alt="炼金站">炼金站</div>
       <p class="desc">冒险者可以在此重置 1 个已耗用的药剂，使其能够再次使用。</p>
     </div>
   </div>
@@ -321,7 +317,7 @@
 
     <div class="card">
       <div class="term">冻疮</div>
-      <p class="desc">在此单位与一位没有使用 <span class="icon axe">🪓 斧头卡牌</span> 的冒险者交战后，该冒险者获得等同于此单位 <span class="icon heart">♥ 生命值</span> 的轻度疲劳骰。</p>
+      <p class="desc">在此单位与一位没有使用 <img class="rule-icon" src="assets/elder-scrolls-betrayal-second-era/icons/axe-card.png" alt="斧头卡牌">斧头卡牌的冒险者交战后，该冒险者获得等同于此单位 <img class="rule-icon" src="assets/elder-scrolls-betrayal-second-era/icons/health.png" alt="生命值">生命值图标数值的轻度疲劳骰。</p>
     </div>
 
     <div class="card">
@@ -336,7 +332,7 @@
 
     <div class="card">
       <div class="term">粉碎</div>
-      <p class="desc">在每个回合中，当此单位首次被一位没有使用 <span class="icon axe">🪓 斧头卡牌</span> 超负荷效果的冒险者交战时，该冒险者必须在本次交战后弃置其预备槽中的 1 张武器卡牌。</p>
+      <p class="desc">在每个回合中，当此单位首次被一位没有使用 <img class="rule-icon" src="assets/elder-scrolls-betrayal-second-era/icons/axe-card.png" alt="斧头卡牌">斧头卡牌超负荷效果的冒险者交战时，该冒险者必须在本次交战后弃置其预备槽中的 1 张武器卡牌。</p>
     </div>
 
     <div class="card">
@@ -376,7 +372,7 @@
 
     <div class="card">
       <div class="term">恢复</div>
-      <p class="desc">在此单位的回合开始时，其治疗等同于 <span class="icon heart">♥ 生命值</span> 图标数值的生命值。</p>
+      <p class="desc">在此单位的回合开始时，其治疗等同于 <img class="rule-icon" src="assets/elder-scrolls-betrayal-second-era/icons/health.png" alt="生命值">生命值图标数值的生命值。</p>
     </div>
 
     <div class="card">
@@ -391,7 +387,7 @@
 
     <div class="card">
       <div class="term">奖励</div>
-      <p class="desc">在此单位被击败后，每位冒险者选择并获得以下奖励之一：1 份 <span class="icon reward">▣ 奖励资源</span>、5 点坚韧点，或将生命属性值提升 1 点（若可能的话）。</p>
+      <p class="desc">在此单位被击败后，每位冒险者选择并获得以下奖励之一：1 份 <img class="rule-icon" src="assets/elder-scrolls-betrayal-second-era/icons/reward.png" alt="奖励资源">奖励资源、5 点坚韧点，或将生命属性值提升 1 点（若可能的话）。</p>
     </div>
 
     <div class="card">
@@ -401,7 +397,7 @@
 
     <div class="card">
       <div class="term">领主</div>
-      <p class="desc">在此单位的回合开始时，从敌人袋中拿取 1 名 <span class="icon enemy">☠ 5 级敌人</span> 放到一旁。如果没有可用的 5 级敌人，则在本回合的交战中，此单位的战斗值加 2。在此单位的回合结束时，将放到一旁的单位部署至距离其最近且未被占据的六角格。</p>
+      <p class="desc">在此单位的回合开始时，从敌人袋中拿取 1 名 <img class="rule-icon" src="assets/elder-scrolls-betrayal-second-era/icons/enemy.png" alt="敌人">5 级敌人放到一旁。如果没有可用的 5 级敌人，则在本回合的交战中，此单位的战斗值加 2。在此单位的回合结束时，将放到一旁的单位部署至距离其最近且未被占据的六角格。</p>
     </div>
 
     <div class="card">
@@ -411,7 +407,7 @@
 
     <div class="card">
       <div class="term">驱散</div>
-      <p class="desc">在一位 <span class="icon magic">✦ 魔法作战形式</span> 的冒险者或 1 个 <span class="icon enemy">☠ 指定敌人单位</span> 与此单位交战后，此单位对交战单位造成等同于其 <span class="icon heart">♥ 生命值</span> 图标数值的真实伤害，即使此单位被击败。</p>
+      <p class="desc">在一位 <img class="rule-icon" src="assets/elder-scrolls-betrayal-second-era/icons/magic-style.png" alt="魔法作战形式">魔法作战形式的冒险者或 1 个 <img class="rule-icon" src="assets/elder-scrolls-betrayal-second-era/icons/enemy.png" alt="指定敌人单位">指定敌人单位与此单位交战后，此单位对交战单位造成等同于其 <img class="rule-icon" src="assets/elder-scrolls-betrayal-second-era/icons/health.png" alt="生命值">生命值图标数值的真实伤害，即使此单位被击败。</p>
     </div>
 
     <div class="card">
@@ -460,7 +456,7 @@
 
     <div class="card">
       <div class="term">死灵法术</div>
-      <p class="desc">在此单位的回合结束时，将被击败敌人中生命值不高于此单位 <span class="icon heart">♥ 生命值</span> 图标数值的单位，部署至距离此单位最近且未被占据的六角格。该新敌人在本作战轮不执行回合。</p>
+      <p class="desc">在此单位的回合结束时，将被击败敌人中生命值不高于此单位 <img class="rule-icon" src="assets/elder-scrolls-betrayal-second-era/icons/health.png" alt="生命值">生命值图标数值的单位，部署至距离此单位最近且未被占据的六角格。该新敌人在本作战轮不执行回合。</p>
     </div>
 
     <div class="card">
@@ -475,7 +471,7 @@
 
     <div class="card">
       <div class="term">偷盗</div>
-      <p class="desc">当此单位确定一个目标后，投掷 1 颗 D6。如果掷骰结果大于等于目标当前生命值，则该目标弃置其预备槽中的 1 张非 <span class="icon food">● 食物物品</span> 卡牌。</p>
+      <p class="desc">当此单位确定一个目标后，投掷 1 颗 D6。如果掷骰结果大于等于目标当前生命值，则该目标弃置其预备槽中的 1 张非 <img class="rule-icon" src="assets/elder-scrolls-betrayal-second-era/icons/food-item.png" alt="食物物品">食物物品卡牌。</p>
     </div>
 
     <div class="card">
@@ -485,7 +481,7 @@
 
     <div class="card">
       <div class="term">虚无缥缈</div>
-      <p class="desc">当此单位被 1 位非 <span class="icon magic">✦ 魔法作战形式</span> 的冒险者造成伤害时，此单位防止等同于其 <span class="icon heart">♥ 生命值</span> 图标数值的伤害。</p>
+      <p class="desc">当此单位被 1 位非 <img class="rule-icon" src="assets/elder-scrolls-betrayal-second-era/icons/magic-style.png" alt="魔法作战形式">魔法作战形式的冒险者造成伤害时，此单位防止等同于其 <img class="rule-icon" src="assets/elder-scrolls-betrayal-second-era/icons/health.png" alt="生命值">生命值图标数值的伤害。</p>
     </div>
 
     <div class="card">
@@ -587,32 +583,32 @@
     <h2 class="section-title">状态效果参考</h2>
     <div class="status-grid">
       <div class="status">
-        <div class="status-name">灾祸</div>
+        <div class="status-name"><img class="status-icon" src="assets/elder-scrolls-betrayal-second-era/icons/status-blight.png" alt="灾祸">灾祸</div>
         <p class="desc">此单位在其每个回合开始时受到 1 点真实伤害。</p>
       </div>
 
       <div class="status">
-        <div class="status-name">致盲</div>
+        <div class="status-name"><img class="status-icon" src="assets/elder-scrolls-betrayal-second-era/icons/status-blind.png" alt="致盲">致盲</div>
         <p class="desc">此单位视所有单位为敌对单位。如果此单位进行交战，则其只能指定最强的相邻单位为目标。</p>
       </div>
 
       <div class="status">
-        <div class="status-name">眩晕</div>
+        <div class="status-name"><img class="status-icon" src="assets/elder-scrolls-betrayal-second-era/icons/status-stun.png" alt="眩晕">眩晕</div>
         <p class="desc">此单位不能在其移动的同个回合掷骰，也不能在其掷骰的同个回合移动。在此单位的回合结束时，移除此状态骰。</p>
       </div>
 
       <div class="status">
-        <div class="status-name">恐惧</div>
+        <div class="status-name"><img class="status-icon" src="assets/elder-scrolls-betrayal-second-era/icons/status-fear.png" alt="恐惧">恐惧</div>
         <p class="desc">无视此单位的非战斗技能效果。此效果对已经在激活槽中或冷却轨上的技能骰无效。</p>
       </div>
 
       <div class="status">
-        <div class="status-name">伤残</div>
+        <div class="status-name"><img class="status-icon" src="assets/elder-scrolls-betrayal-second-era/icons/status-cripple.png" alt="伤残">伤残</div>
         <p class="desc">当此单位投掷战斗技能骰时，将投掷的总伤害减半并向下取整。此效果对真实伤害无效。</p>
       </div>
 
       <div class="status">
-        <div class="status-name">潜行</div>
+        <div class="status-name"><img class="status-icon" src="assets/elder-scrolls-betrayal-second-era/icons/status-stealth.png" alt="潜行">潜行</div>
         <p class="desc">此单位只能被在当前回合开始时与之相邻的敌对单位指定为目标。此单位造成伤害后，移除此骰子。</p>
       </div>
     </div>
